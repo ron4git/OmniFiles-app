@@ -25,7 +25,7 @@ Download the package for your operating system directly from this repository:
 |---|---|---|---|
 | **macOS** (Apple Silicon / Intel) | [**`OmniFiles-macOS.zip`**](./OmniFiles-macOS.zip) | Standalone portable macOS Application (`OmniFiles.app`) | Unzip & double-click `OmniFiles.app` |
 | **Windows & Linux & Mac** | [**`OmniFiles-Desktop-Universal-JAR.zip`**](./OmniFiles-Desktop-Universal-JAR.zip) | Standalone executable universal Uber JAR | Unzip & run `java -jar OmniFiles...jar` |
-| **Android** (8.0+ Oreo to 14/15) | [**`OmniFiles.apk`**](./OmniFiles.apk) *(Manual upload)* | Full Android APK with Radar & Hotspot Drop | Download & tap to install |
+| **Android** (8.0+ Oreo to 14/15) | [**`OmniFiles-release.apk`**](./OmniFiles-release.apk) | Signed Release Android APK with Radar & Hotspot Drop | Download & tap to install |
 
 ---
 
@@ -51,7 +51,7 @@ Download the package for your operating system directly from this repository:
    *(Or double-click the `.jar` on Windows if Java file associations are configured).*
 
 ### 🤖 Android
-1. Download [**`OmniFiles.apk`**](./OmniFiles.apk) directly on your Android device (or transfer it from your computer).
+1. Download [**`OmniFiles-release.apk`**](./OmniFiles-release.apk) directly on your Android device (or transfer it from your computer).
 2. Open the downloaded `.apk` file from your notification panel or Files app.
 3. If prompted, toggle **"Allow from this source"** in your phone's Settings to enable sideloading.
 4. Tap **Install** and launch OmniFiles.
