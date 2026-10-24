@@ -23,32 +23,40 @@ Download the package for your operating system directly from this repository:
 
 | Platform | Package | Description | Quick Start |
 |---|---|---|---|
-| **macOS** (Apple Silicon / Intel) | [**`OmniFiles-macOS.zip`**](./OmniFiles-macOS.zip) | Standalone portable macOS Application (`OmniFiles.app`) | Unzip & double-click `OmniFiles.app` |
-| **Windows & Linux & Mac** | [**`OmniFiles-Desktop-Universal-JAR.zip`**](./OmniFiles-Desktop-Universal-JAR.zip) | Standalone executable universal Uber JAR | Unzip & run `java -jar OmniFiles...jar` |
+| **macOS, Windows & Linux** | [**`OmniFiles-Desktop.zip`**](./OmniFiles-Desktop.zip) | Unified Desktop Bundle (`OmniFiles.jar` + `OmniFiles.app` + `OmniFiles.command` + `OmniFiles.bat` + `OmniFiles.sh`) | Unzip & run `./OmniFiles.command` (Mac), `OmniFiles.bat` (Windows), or `./OmniFiles.sh` (Linux) |
 | **Android** (8.0+ Oreo to 14/15) | [**`OmniFiles-release.apk`**](./OmniFiles-release.apk) | Signed Release Android APK with Radar & Hotspot Drop | Download & tap to install |
 
 ---
 
 ## 💻 Installation & Usage Guide
 
-### 🍏 macOS
-1. Download [**`OmniFiles-macOS.zip`**](./OmniFiles-macOS.zip) and extract it.
-2. Drag `OmniFiles.app` to your `/Applications` folder (or run it directly from anywhere).
-3. If macOS displays a Gatekeeper prompt (*"unidentified developer"* or *"app is damaged"*):
-   - Right-click `OmniFiles.app` and choose **Open**, then click **Open** in the dialog.
-   - Alternatively, open Terminal and run:
+### 🍏 macOS (Apple Silicon & Intel)
+1. Download [**`OmniFiles-Desktop.zip`**](./OmniFiles-Desktop.zip) and extract it (keep `OmniFiles.app`, `OmniFiles.command`, and `OmniFiles.jar` in the same folder).
+2. **First Launch (Bypasses macOS Gatekeeper *"Apple could not verify"* dialog)**:
+   - Open Terminal in the extracted folder and run:
      ```bash
-     xattr -cr /Applications/OmniFiles.app
+     ./OmniFiles.command
      ```
-
-### 🪟 Windows & 🐧 Linux
-1. Download [**`OmniFiles-Desktop-Universal-JAR.zip`**](./OmniFiles-Desktop-Universal-JAR.zip) and extract it.
-2. Ensure you have **Java 17 or higher** installed (`java -version`).
-3. Run the application:
+     *(Or right-click `OmniFiles.command` in Finder and click **Open**).*
+   - `OmniFiles.command` automatically removes the macOS `com.apple.quarantine` flag from `OmniFiles.app` and launches `OmniFiles.jar` from the same folder. After running once, you can double-click `OmniFiles.app` anytime!
+3. **Optional — Install to `/Applications`**:
    ```bash
-   java -jar OmniFiles-macos-arm64-1.0.0.jar
+   ./OmniFiles.command --install
    ```
-   *(Or double-click the `.jar` on Windows if Java file associations are configured).*
+
+### 🪟 Windows
+1. Download [**`OmniFiles-Desktop.zip`**](./OmniFiles-Desktop.zip) and extract it.
+2. Ensure **Java 17 or higher** is installed.
+3. Double-click **`OmniFiles.bat`** (or run `java -jar OmniFiles.jar`).
+
+### 🐧 Linux
+1. Download [**`OmniFiles-Desktop.zip`**](./OmniFiles-Desktop.zip) and extract it.
+2. Ensure **Java 17 or higher** is installed (`sudo apt install openjdk-21-jre`).
+3. Run the launcher script from the extracted folder:
+   ```bash
+   ./OmniFiles.sh
+   ```
+   *(Optional: Run `./OmniFiles.sh --install` to add OmniFiles to your Linux Desktop Application Menu).*
 
 ### 🤖 Android
 1. Download [**`OmniFiles-release.apk`**](./OmniFiles-release.apk) directly on your Android device (or transfer it from your computer).
